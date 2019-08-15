@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:visibility="visible"
+            app:tabIndicatorColor="#FFFFFF"
+            app:tabMode="fixed"
+            app:tabTextColor="#FFFFFF">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tbConversations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/lbl_conversations"
+                android:visibility="visible" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tbContacts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/lbl_contacts"
+                android:visibility="visible" />
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ListView
+        android:id="@+id/lstChatContact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
